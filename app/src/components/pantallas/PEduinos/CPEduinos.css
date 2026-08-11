@@ -1,0 +1,722 @@
+@keyframes flotar {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.CPEduinos-contenedordeEduinosGeneral{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.CPEduinos-contenedorBotonesOrdenar{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    flex-shrink: 0;
+}
+
+.CPEduinos-barraFiltros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    background: white;
+    border: 1px solid rgba(62, 192, 250, 0.25);
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(62, 192, 250, 0.1);
+    width: 100%;
+}
+
+.CPEduinos-orbes {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+}
+
+.CPEduinos-orbeFiltro {
+    background: white;
+    border: 2px solid #e8e8e8;
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.CPEduinos-orbeFiltro img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.CPEduinos-orbeFiltro:hover {
+    border-color: var(--color_principal_Eduino);
+    transform: scale(1.12);
+}
+
+.CPEduinos-orbeFiltro--activo {
+    border-color: var(--color_principal_Eduino);
+    box-shadow: 0 0 0 3px rgba(62, 192, 250, 0.3);
+    transform: scale(1.12);
+}
+
+.CPEduinos-orbeTodos {
+    font-size: 1rem;
+    color: var(--color_principal_Eduino);
+    line-height: 1;
+}
+
+.CPEduinos-grupoFiltro {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.CPEduinos-filtroLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.CPEduinos-pils {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.CPEduinos-pil {
+    background: none;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 2rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    white-space: nowrap;
+    font-family: var(--fuente);
+}
+
+.CPEduinos-pil:hover {
+    border-color: var(--color_principal_Eduino);
+    color: var(--color_principal_Eduino);
+}
+
+.CPEduinos-pil--activo {
+    background: var(--color_principal_Eduino);
+    border-color: var(--color_principal_Eduino);
+    color: white;
+}
+
+.CPEduinos-pil--activo:hover {
+    background: var(--color_principal_Eduino);
+    color: white;
+    opacity: 0.85;
+}
+
+.CPEduinos-filtroSep {
+    width: 1px;
+    height: 1.4rem;
+    background: rgba(62, 192, 250, 0.25);
+    flex-shrink: 0;
+}
+
+.CPEduinos-contenedorEduinos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+
+    scrollbar-width: none;
+
+    border-top: 2px solid rgba(62, 192, 250, 0.25);
+}
+
+.CPEduinos-targetaEduino{
+    width: 12rem;
+    height: 14rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    border: 2px solid var(--color_principal_Eduino);
+    border-radius: 1.2rem;
+    padding: 1rem 0.8rem 0.8rem;
+    background: white;
+    box-shadow: 0 4px 12px #3ebefa76;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+}
+
+.CPEduinos-targetaEduino:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(62, 192, 250, 0.35);
+}
+
+.CPEduinos-targetaEduino p{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.CPEduinos-imagenEduino{
+    width: 6.5rem;
+    height: 6.5rem;
+    object-fit: contain;
+}
+
+.CPEduinos-targetaEduino p{
+    font-size: 1.4rem;
+}
+
+.CPEduinos-bloqueado{
+    border-color: #bbb;
+    background: #f0f0f0;
+    box-shadow: none;
+    cursor: default;
+}
+
+.CPEduinos-bloqueado:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+.CPEduinos-bloqueado .CPEduinos-imagenEduino{
+    filter: brightness(0);
+    opacity: 0.25;
+}
+
+.CPEduinos-bloqueado p{
+    color: #aaa;
+}
+
+/* Modal */
+
+.CPEduinos-burbuja-fondo{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.CPEduinos-burbuja{
+    position: relative;
+    width: min(60rem, 90%);
+    height: min(35rem, 90%);
+    background: white;
+    border-radius: 1.5rem;
+    border: 2px solid var(--color_principal_Eduino);
+    box-shadow: 0 12px 40px rgba(62, 192, 250, 0.3);
+    padding: 2.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: CPEduinos-entrada 0.2s ease;
+}
+
+@keyframes CPEduinos-entrada {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.CPEduinos-burbuja-cerrar{
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #aaa;
+    line-height: 1;
+    transition: color 0.15s;
+}
+
+.CPEduinos-burbuja-cerrar:hover{
+    color: #333;
+}
+
+.CPEduinos-contenedorEdupedia{
+    display: grid;
+    grid-template-columns: 5fr 0.08fr 5fr;
+    flex: 1;
+    overflow: hidden;
+}
+
+/*  */
+.CPEduinos-eduino {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-right: 1rem;
+}
+
+/* */
+.CPEduinos-contenedorDatosTop{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(62, 192, 250, 0.2);
+    flex-shrink: 0;
+}
+
+.CPEduinos-orbeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    flex-shrink: 0;
+}
+
+.CPEduinos-imagenOrbe{
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+.CPEduinos-tipoLabel {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--color_principal_Eduino);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.CPEduinos-nombreWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.CPEduinos-nombreEduino {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #222;
+    text-align: center;
+}
+
+.CPEduinos-copiaBtn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--color_principal_Eduino);
+    cursor: pointer;
+    padding: 0 0.2rem;
+    line-height: 1;
+    transition: opacity 0.15s, transform 0.1s;
+}
+
+.CPEduinos-copiaBtn:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+.CPEduinos-numeroEduino {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #bbb;
+    flex-shrink: 0;
+}
+
+/* */
+.CPEduinos-contenedorImagenDatos{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 50% 60%, rgba(62, 192, 250, 0.1) 0%, transparent 70%);
+    overflow: hidden;
+}
+
+.CPEduinos-imagenEduinoCompleto{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 16px rgba(62, 192, 250, 0.25));
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.CPEdionos-separador{
+    background-color: rgba(62, 192, 250, 0.3);
+    width: 1px;
+    margin: 0 0.2rem;
+}
+
+/* */
+.CPEduinos-tabOculto {
+    display: none !important;
+}
+
+/* */
+.CPEduinos-barraProgreso {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.8rem;
+}
+
+.CPEduinos-nivelLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color_principal_Eduino);
+    white-space: nowrap;
+    margin: 0;
+}
+
+.CPEduinos-barra {
+    flex: 1;
+    height: 0.5rem;
+    background: #e8e8e8;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.CPEduinos-barraRelleno {
+    height: 100%;
+    background: linear-gradient(to right, #3ec0fa, #0090d0);
+    border-radius: 1rem;
+    transition: width 0.4s ease;
+}
+
+.CPEduinos-porcentajeLabel {
+    font-size: 0.75rem;
+    color: #999;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* */
+.CPEduinos-datosComida {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.CPEduinos-contenedorBotonesDatosComida {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0.5rem 0.8rem 0;
+    border-bottom: 1px solid rgba(62, 192, 250, 0.25);
+    margin-bottom: 0.6rem;
+}
+
+.CPEduinos-contenedorBotonesDatosComida p {
+    margin: 0 0 -1px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #aaa;
+    cursor: pointer;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.CPEduinos-contenedorBotonesDatosComida p:hover {
+    color: var(--color_principal_Eduino);
+}
+
+.CPEduinos-tabActivo {
+    color: var(--color_principal_Eduino) !important;
+    border-bottom-color: var(--color_principal_Eduino) !important;
+}
+
+/* */
+.CPEduinos-comida {
+    padding: 0.5rem 0.8rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.CPEduinos-proximamente {
+    text-align: center;
+    color: #bbb;
+    font-style: italic;
+    padding: 2rem 0;
+    margin: 0;
+}
+
+.CPEduinos-separadorDatos {
+    height: 1px;
+    background: rgba(62, 192, 250, 0.2);
+    margin: 0.4rem 0;
+    flex-shrink: 0;
+}
+
+.CPEduinos-contenedorTexto {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.1rem 0;
+}
+
+.CPEduinos-contenedorTexto p {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.CPEduinos-contenedorTexto::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(62, 190, 250, 0.788);
+}
+
+/* */
+.CPEduinos-datos {
+    padding: 0 0.8rem 0.5rem;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.CPEduinos-tipoBadge {
+    display: inline-block;
+    background: var(--color_principal_Eduino);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.CPEduinos-statsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.CPEduinos-icono {
+    width: 1.3rem;
+    height: 1.3rem;
+    object-fit: contain;
+    display: block;
+}
+
+.CPEduinos-statRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.CPEduinos-statRow span:first-child {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.CPEduinos-statRow span:last-child {
+    width: 2rem;
+    text-align: right;
+    color: #777;
+    flex-shrink: 0;
+}
+
+.CPEduinos-statBarra {
+    flex: 1;
+    height: 0.45rem;
+    background: #e8e8e8;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.CPEduinos-statRelleno {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.CPEduinos-statVida {
+    background: linear-gradient(to right, #ff6b6b, #cc2222);
+}
+
+.CPEduinos-statFuerza {
+    background: linear-gradient(to right, #f5a623, #d07800);
+}
+
+/* */
+.CPEduinos-ataquesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.CPEduinos-ataqueItem {
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.78rem;
+    color: #444;
+}
+
+.CPEduinos-superAtaqueItem {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #fff8e7, #fde7a0);
+    border: 1px solid #e8c83a;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.78rem;
+    color: #7a5500;
+    font-weight: 700;
+}
+
+/*  */
+
+.CPEduinos-almacenComida{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.CPEduinos-comidaTargeta{
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.8rem;
+    background: white;
+    border-radius: 1rem;
+    border: 2px solid #e8edf3;
+    box-shadow: 0 4px 12px #3ebefa76;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.CPEduinos-comidaTargeta img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.CPEduinos-comidaTargeta:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(62, 192, 250, 0.2);
+    border-color: var(--color_principal_Eduino);
+}
+
+.CPEduinos-comidaTargeta:active{
+    transform: scale(0.90);
+}
+
+.CPEduinos-comidaNombre {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #1A1A2E;
+}
+
+.CPEduinos-comidaAlimentacion {
+    font-size: 0.8rem;
+    color: #2e7d4f;
+    background: #e6f9ec;
+    border-radius: 9999px;
+    padding: 0.15rem 0.55rem;
+    border: 1.5px solid #a3dbb8;
+    white-space: nowrap;
+}
+
+.CPEduinos-comidaCantidad {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #b07800;
+    background: #fff3c4;
+    border-radius: 9999px;
+    padding: 0.15rem 0.55rem;
+    border: 1.5px solid #f5d060;
+    white-space: nowrap;
+}
+
+.CPEduinos-sinComida {
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: center;
+    line-height: 1.6;
+    margin: auto 0;
+}
+
+.CPEduinos-descripcionContenedor p{
+    font-size: 0.8rem;
+}
+
+.CPEduinos-contenedorBotonVenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0 0.2rem;
+}
+
+.CPEduinos-contenedorBotonVenta p {
+    margin: 0;
+    padding: 0.55rem 2rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
+}
+
+.CPEduinos-contenedorBotonVenta p:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(22, 163, 74, 0.5);
+}
+
+.CPEduinos-contenedorBotonVenta p:active {
+    transform: scale(0.93);
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);
+}

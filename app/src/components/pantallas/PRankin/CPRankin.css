@@ -1,0 +1,278 @@
+.CPRankin-contenedor {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem 1rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+/* */
+
+.CPRankin-tabs {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.CPRankin-tab {
+    flex: 1;
+    max-width: 12rem;
+    padding: 0.55rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(62, 192, 250, 0.35);
+    background: white;
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    color: #6b7c93;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.CPRankin-tab--activo {
+    background: var(--color_principal_Eduino);
+    border-color: var(--color_principal_Eduino);
+    color: white;
+    box-shadow: 0 4px 14px rgba(62, 192, 250, 0.4);
+}
+
+.CPRankin-checkAmigos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1rem 0.45rem 0.6rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(134, 97, 224, 0.35);
+    background: white;
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    color: #6b7c93;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.CPRankin-checkAmigos--activo {
+    border-color: #8661e0;
+    color: #8661e0;
+}
+
+.CPRankin-checkBox {
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 0.3rem;
+    border: 2px solid #c4b5f4;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+}
+
+.CPRankin-checkAmigos--activo .CPRankin-checkBox {
+    background: #8661e0;
+    border-color: #8661e0;
+}
+
+.CPRankin-checkMarca {
+    font-size: 0.7rem;
+    color: white;
+    line-height: 1;
+    font-weight: 900;
+}
+
+
+.CPRankin-miPosicion {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: white;
+    border: 2px solid var(--color_principal_Eduino);
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px #3ebefa76;
+    flex-shrink: 0;
+}
+
+.CPRankin-miTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 4rem;
+}
+
+.CPRankin-miTopNumero {
+    font-family: var(--fuente);
+    font-size: 2rem;
+    color: var(--color_principal_Eduino);
+    line-height: 1;
+}
+
+.CPRankin-miTopLabel {
+    font-size: 0.72rem;
+    color: #8899aa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.CPRankin-miInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.CPRankin-miAvatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color_principal_Eduino);
+}
+
+.CPRankin-miApodo {
+    font-family: var(--fuente);
+    font-size: 1.2rem;
+    color: #1A1A2E;
+}
+
+.CPRankin-miValor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.1rem;
+}
+
+.CPRankin-miValorNum {
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    color: #1A1A2E;
+}
+
+.CPRankin-miValorLabel {
+    font-size: 0.75rem;
+    color: #8899aa;
+    text-transform: capitalize;
+}
+
+.CPRankin-sinPosicion {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #8899aa;
+    padding: 1rem;
+    background: white;
+    border: 2px solid rgba(62, 192, 250, 0.25);
+    border-radius: 2rem;
+    flex-shrink: 0;
+}
+
+.CPRankin-separador {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(62, 192, 250, 0.45), transparent);
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+.CPRankin-lista {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 0.3rem;
+    scrollbar-width: none;
+}
+
+.CPRankin-fila {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    background: white;
+    border: 1.5px solid rgba(62, 192, 250, 0.2);
+    border-radius: 1.2rem;
+    padding: 0.65rem 1rem;
+    transition: transform 0.12s ease;
+    flex-shrink: 0;
+}
+
+.CPRankin-fila:hover {
+    transform: translateX(4px);
+}
+
+/* Top 1 - Oro */
+.CPRankin-fila--top1 {
+    border-color: #FFD700;
+    background: linear-gradient(135deg, #fffbe6, #fff);
+    box-shadow: 0 3px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Top 2 - Plata */
+.CPRankin-fila--top2 {
+    border-color: #b0b8c1;
+    background: linear-gradient(135deg, #f4f5f7, #fff);
+    box-shadow: 0 3px 10px rgba(176, 184, 193, 0.3);
+}
+
+/* Top 3 - Bronce */
+.CPRankin-fila--top3 {
+    border-color: #CD7F32;
+    background: linear-gradient(135deg, #fdf3ea, #fff);
+    box-shadow: 0 3px 10px rgba(205, 127, 50, 0.25);
+}
+
+/* Yo */
+.CPRankin-fila--yo {
+    border-color: var(--color_principal_Eduino);
+    box-shadow: 0 4px 14px rgba(62, 192, 250, 0.35);
+}
+
+.CPRankin-posicion {
+    font-family: var(--fuente);
+    font-size: 1rem;
+    color: #8899aa;
+    min-width: 2.8rem;
+    text-align: center;
+}
+
+.CPRankin-fila--top1 .CPRankin-posicion { color: #b8860b; font-size: 1.1rem; }
+.CPRankin-fila--top2 .CPRankin-posicion { color: #6b7c93; font-size: 1.1rem; }
+.CPRankin-fila--top3 .CPRankin-posicion { color: #8b5e2e; font-size: 1.1rem; }
+.CPRankin-fila--yo  .CPRankin-posicion  { color: var(--color_principal_Eduino); }
+
+.CPRankin-avatar {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(62, 192, 250, 0.35);
+    flex-shrink: 0;
+}
+
+.CPRankin-apodo {
+    flex: 1;
+    font-family: var(--fuente);
+    font-size: 1rem;
+    color: #1A1A2E;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.CPRankin-valor {
+    font-size: 0.85rem;
+    color: #6b7c93;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.CPRankin-cargando {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente);
+    font-size: 1.1rem;
+    color: #a0b4c8;
+}

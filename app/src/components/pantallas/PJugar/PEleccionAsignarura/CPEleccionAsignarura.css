@@ -1,0 +1,75 @@
+.CPEleccionAsignarura-contenedorClases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 1rem;
+    justify-content: center;
+
+    flex: 1;
+    overflow-y: auto;
+    padding-block: 1rem;
+
+    scrollbar-width: none;
+}
+
+.CPEleccionAsignarura-targetaClase {
+    width: 16rem;
+    height: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+    font-family: var(--fuente);
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.CPEleccionAsignarura-targetaClase:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+#CPEleccionAsignarura-lengua {
+    background: linear-gradient(135deg, #ff6b6b, #ee3f3f);
+}
+
+#CPEleccionAsignarura-matematicas {
+    background: linear-gradient(135deg, #4aedff, #00c3d9);
+    text-shadow: none;
+}
+
+#CPEleccionAsignarura-ingles {
+    background: linear-gradient(135deg, #ffe066, #f5c400);
+    text-shadow: none;
+}
+
+#CPEleccionAsignarura-geografia {
+    background: linear-gradient(135deg, #ffaa5e, #f07b20);
+}
+
+#CPEleccionAsignarura-historia {
+    background: linear-gradient(135deg, #f76be8, #c732b0);
+}
+
+#CPEleccionAsignarura-tecnologia {
+    background: linear-gradient(135deg, #a0a0b0, #6b6b80);
+}
+
+#CPEleccionAsignarura-global {
+    background: linear-gradient(135deg, #6bcfff, #2196f3);
+}
+
+#CPEleccionAsignarura-creados {
+    background: linear-gradient(135deg, #98e87a, #4caf50);
+}

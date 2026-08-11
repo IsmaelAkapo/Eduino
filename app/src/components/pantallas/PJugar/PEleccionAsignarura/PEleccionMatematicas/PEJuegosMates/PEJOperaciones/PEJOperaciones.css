@@ -1,0 +1,150 @@
+.PEJOperaciones-contenedorSeleccion {
+    width: 60rem;
+    padding: 3.5rem 5rem;
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
+    background: white;
+    border-radius: 2rem;
+    border: 2px solid #e8edf3;
+    box-shadow: 0 4px 12px #3ebefa76;
+}
+
+.PEJOperaciones-contenedorSeleccion h4 {
+    font-family: var(--fuente);
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+}
+
+.PEJOperaciones-contenedorBotones {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.PEJOperaciones-contenedorBotones p {
+    width: 10rem;
+    height: 7rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente);
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #555;
+    background: white;
+    border-radius: 1.2rem;
+    border: 2px solid #e8edf3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.PEJOperaciones-contenedorBotones p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(62, 192, 250, 0.25);
+}
+
+.PEJOperaciones-contenedorBotones p:active {
+    transform: scale(0.93);
+}
+
+.PEJOperaciones-contenedorBotones p.PEJOperaciones-botonActivo {
+    background: var(--color_principal_Eduino);
+    color: white;
+    border-color: var(--color_principal_Eduino);
+    box-shadow: 0 6px 18px rgba(62, 192, 250, 0.45);
+}
+
+.PEJOperaciones-contenedorBotonComenzar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.PEJOperaciones-botonEmpezar {
+    width: fit-content;
+    padding: 0.9rem 3.5rem;
+    margin: 0;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    background: linear-gradient(135deg, var(--color_principal_Eduino) 0%, #1ba8f0 100%);
+    font-family: var(--fuente);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    box-shadow: 0 6px 18px rgba(62, 192, 250, 0.4);
+    transition: transform 0.15s, box-shadow 0.15s;
+    user-select: none;
+}
+
+.PEJOperaciones-botonEmpezar:hover {
+    box-shadow: 0 8px 24px rgba(62, 192, 250, 0.55);
+    transform: translateY(-2px);
+}
+
+.PEJOperaciones-botonEmpezar:active {
+    transform: scale(0.97);
+}
+
+/*  */
+
+
+.PEJOperaciones-cabecera{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: 9fr 1fr 1fr;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    
+}
+
+.PEJOperaciones-resultados {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.PEJOperaciones-resultados > h2 {
+    font-family: var(--fuente);
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.PEJOperaciones-puntaje {
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0;
+}
+
+.PEJOperaciones-monedasResultado {
+    font-family: var(--fuente);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color_principal_Eduino);
+    background: rgba(62, 192, 250, 0.1);
+    border: 2px solid var(--color_principal_Eduino);
+    border-radius: 2rem;
+    padding: 0.5rem 1.8rem;
+    margin: 0;
+}
+
+/*  */
+.moneda{
+    object-fit: contain;
+    width: 3rem;
+}

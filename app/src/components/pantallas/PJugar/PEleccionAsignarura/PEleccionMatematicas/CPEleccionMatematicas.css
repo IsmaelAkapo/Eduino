@@ -1,0 +1,73 @@
+.CPEleccionMatematicas-contenedorTargetas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow-y: auto;
+    padding-block: 1rem;
+
+    scrollbar-width: none;
+}
+
+.CPEleccionMatematicas-targetaClase{
+    width: 16rem;
+    height: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+    font-family: var(--fuente);
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.CPEleccionMatematicas-targetaClase:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+#CPEleccionMatematicas-operaciones{
+    background: linear-gradient(135deg, #4aedff, #00c3d9);
+    text-shadow: none;
+}
+
+#CPEleccionMatematicas-test{
+    background: linear-gradient(135deg, #4aedff, #00c3d9);
+    text-shadow: none;
+}
+
+#CPEleccionMatematicas-problemas{
+    background: linear-gradient(135deg, #4aedff, #00c3d9);
+    text-shadow: none;
+}
+
+.CPEleccionMatematicas-contenedorSubseccion {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.CPEleccionMatematicas--destapado {
+    display: flex;
+}
+
+.CPEleccionMatematicas--tapado {
+    display: none;
+}

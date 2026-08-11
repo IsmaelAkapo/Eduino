@@ -1,0 +1,38 @@
+.PAccesoTutor-contenido {
+    min-height: calc(100vh - 4.5rem);
+}
+
+.PAccesoTutor-contenedorEncabezado{
+    background-color: white;
+
+    padding-inline: 1.4rem;
+    padding-block: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.304);
+
+    font-size: 1.2rem;
+}
+
+.PAccesoTutor-contenedorEncabezado img{
+    width: 13rem;
+}
+
+.PAccesoTutor-contenedorLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.PAccesoTutor-contenedorLogin > * {
+    background-color: white;
+    border-radius: 4rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding-inline: 5rem;
+    padding-block: 3rem;
+    margin-bottom: 4.1rem;
+}     

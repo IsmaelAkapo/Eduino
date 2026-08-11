@@ -1,0 +1,22 @@
+.PAccesoNene-contenido {
+    min-height: calc(100vh - 4.5rem);
+}
+
+.PAccesoNene-contenedorEncabezado{
+    background-color: white;
+
+    padding-inline: 1.4rem;
+    padding-block: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.304);
+
+    font-size: 1.2rem;
+}
+
+.PAccesoNene-contenedorEncabezado img{
+    width: 13rem;
+}     

@@ -1,0 +1,167 @@
+
+@keyframes entrarConfirmacion {
+    from { opacity: 0; transform: scale(0.88) translateY(18px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+@keyframes rellenarBarra {
+    from { width: 0%; }
+}
+
+/**/
+
+.CPComenzarBatalla-contenedorConfirmacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+
+    background: white;
+    border: 2px solid rgba(62, 192, 250, 0.35);
+    border-radius: 2rem;
+    box-shadow: 0 16px 48px rgba(62, 192, 250, 0.22);
+    padding: 2rem 2.4rem 1.8rem;
+    width: min(22rem, 90vw);
+
+    animation: entrarConfirmacion 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/**/
+
+.CPComenzarBatalla-cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.CPComenzarBatalla-cabecera img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 20px rgba(62, 192, 250, 0.45));
+}
+
+.CPComenzarBatalla-nombre {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1A1A2E;
+    letter-spacing: 0.01em;
+}
+
+/**/
+
+.CPComenzarBatalla-contenedorStatsGrande {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.CPComenzarBatalla-contenedorStats {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.CPComenzarBatalla-contenedorStats > img {
+    width: 1.7rem;
+    height: 1.7rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.CPComenzarBatalla-statDetalle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.CPComenzarBatalla-statDetalle > p {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1A1A2E;
+    line-height: 1;
+}
+
+/* */
+
+.CPComenzarBatalla-barraFondo {
+    width: 100%;
+    height: 0.55rem;
+    background: #e8f4fb;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.CPComenzarBatalla-barraRelleno {
+    height: 100%;
+    border-radius: 9999px;
+    animation: rellenarBarra 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.CPComenzarBatalla-barraVida {
+    background: linear-gradient(90deg, #4ade80, #16a34a);
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+}
+
+.CPComenzarBatalla-barraFuerza {
+    background: linear-gradient(90deg, #fb923c, #dc2626);
+    box-shadow: 0 0 8px rgba(251, 146, 60, 0.5);
+}
+
+/* */
+
+.CPComenzarBatalla-contenedorBotonesConfirmacion {
+    display: flex;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.CPComenzarBatalla-contenedorBotonesConfirmacion p {
+    flex: 1;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    font-family: var(--fuente);
+}
+
+/* */
+.CPComenzarBatalla-contenedorBotonesConfirmacion p:first-child {
+    background: #f0f4f8;
+    color: #8899aa;
+    border: 2px solid #dde8f0;
+}
+
+.CPComenzarBatalla-contenedorBotonesConfirmacion p:first-child:hover {
+    border-color: rgba(62, 192, 250, 0.4);
+    color: var(--color_principal_Eduino);
+    transform: translateY(-2px);
+}
+
+/* */
+.CPComenzarBatalla-contenedorBotonesConfirmacion p:last-child {
+    background: linear-gradient(135deg, var(--color_principal_Eduino), #0096d6);
+    color: white;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 14px rgba(62, 192, 250, 0.4);
+}
+
+.CPComenzarBatalla-contenedorBotonesConfirmacion p:last-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(62, 192, 250, 0.55);
+}
+
+.CPComenzarBatalla-contenedorBotonesConfirmacion p:last-child:active {
+    transform: scale(0.95);
+}

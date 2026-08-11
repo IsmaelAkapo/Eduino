@@ -1,0 +1,81 @@
+.CPEleccionEduino-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.CPEleccionEduino-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    overflow-y: auto;
+    align-content: flex-start;
+    flex: 1;
+}
+
+.CPEleccionEduino-tarjeta {
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.9rem 0.6rem;
+
+    background: white;
+    border: solid 0.2rem var(--color_principal_Eduino);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px #3ebefa76;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.CPEleccionEduino-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px #3ebefa76;
+}
+
+.CPEleccionEduino-tarjeta:active {
+    transform: scale(0.95);
+}
+
+.CPEleccionEduino-foto {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+}
+
+.CPEleccionEduino-nombre {
+    font-family: var(--fuente);
+    font-size: 1.4rem;
+    color: #1A1A2E;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.CPEleccionEduino-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: var(--fuente);
+    font-size: 1.4rem;
+    color: #888;
+}
+
+.CPEleccionEduino-nivel {
+    font-family: var(--fuente);
+    font-size: 1.2rem;
+    background: var(--color_principal_Eduino);
+    color: white;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4rem;
+}

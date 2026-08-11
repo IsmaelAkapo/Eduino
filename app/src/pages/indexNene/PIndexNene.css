@@ -1,0 +1,155 @@
+.PIndexNene-contenedorParaApp {
+    height: calc(100vh - 5rem);
+    height: calc(100dvh - 5rem);
+
+    background-color: #f5f7fb;
+
+    margin-top: 1rem;
+    margin-inline: 1rem;
+
+    padding: 1.5rem;
+
+    border: solid black 0.3rem;
+    border-radius: 2rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+}
+
+.PIndexNene-contenedorEncabezadoLateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 4px 12px #3ebefa76;
+    border: 1px solid #e8edf3;
+    height: fit-content;
+}
+
+.PIndexNene-contenedorEncabezadoLateral img {
+    width: 8rem;
+    margin-bottom: 0.5rem;
+}
+
+.PIndexNene-fotoPerfil img{
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 40rem;
+    border: solid var(--color_principal_Eduino) 0.2rem; ;
+    cursor: pointer;
+}
+
+.PIndexNene-fotoPerfil img:active{
+    transform: scale(0.90);
+}
+.PIndexNene-botonesEncabezadoLateral {
+    width: 10rem;
+    height: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--fuente);
+    font-size: 1rem;
+    color: #1A1A2E;
+
+    border: solid var(--color_principal_Eduino) 0.2rem;
+    border-radius: 4rem;
+    background-color: #3ebefa20;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.PIndexNene-botonesEncabezadoLateral:hover {
+    background-color: #3ebefa45;
+    box-shadow: 0 4px 12px rgba(62, 192, 250, 0.3);
+}
+
+.PIndexNene-botonesEncabezadoLateral:active {
+    transform: scale(0.95);
+}
+
+.PIndexNene-botonesEncabezadoLateral-salir {
+    width: 10rem;
+    height: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--fuente);
+    font-size: 1rem;
+    color: #c0392b;
+
+    border: solid #e74c3c 0.2rem;
+    border-radius: 4rem;
+    background-color: rgba(231, 76, 60, 0.1);
+    cursor: pointer;
+
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.PIndexNene-botonesEncabezadoLateral-salir:hover {
+    background-color: rgba(231, 76, 60, 0.22);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.25);
+}
+
+.PIndexNene-botonesEncabezadoLateral-salir:active {
+    transform: scale(0.95);
+}
+
+.PIndexNene-LogoEncabezadoLateral{
+    padding-top: 1rem;
+}
+
+
+.PIndexNene-contenedorIndex {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+
+    background: white;
+    border: solid var(--color_principal_Eduino) 0.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 16px rgba(62, 192, 250, 0.1);
+}
+
+/*  */
+
+.PIndexNene-contenedorPantallas{
+    display: none;
+}
+
+.PIndexNene-contenedorPantallas--activo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+/*  */
+
+.PIndexNene-botonPresionado {
+    background: var(--color_principal_Eduino);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 14px rgba(62, 192, 250, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+}
+
+.PIndexNene-contenedorIndex { overflow-y: auto; }
+.PIndexNene-contenedorPantallas--activo { overflow-y: auto; }

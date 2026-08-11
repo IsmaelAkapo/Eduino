@@ -1,0 +1,123 @@
+.CProblema-enunciado {
+    width: 50rem;
+    margin-bottom: 2rem;
+    padding: 2rem 3rem;
+    background: white;
+    border-radius: 2rem;
+    border: 2px solid #e8edf3;
+    box-shadow: 0 6px 18px rgba(62, 192, 250, 0.4);
+    text-align: center;
+}
+
+.CProblema-enunciado p {
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+.CProblema-respuesta {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.CProblema-input {
+    flex: 1;
+    padding: 1.2rem 1.6rem;
+    border-radius: 1.2rem;
+    border: 2px solid #e8edf3;
+    box-shadow: 0 4px 14px rgba(62, 192, 250, 0.3);
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.CProblema-input::-webkit-outer-spin-button,
+.CProblema-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.CProblema-input:focus {
+    border-color: #3ec0fa;
+    box-shadow: 0 4px 18px rgba(62, 192, 250, 0.55);
+}
+
+.CProblema-input--correcta {
+    background: #e8f9ef;
+    border-color: #34c467;
+    box-shadow: 0 4px 18px rgba(52, 196, 103, 0.35);
+    color: #1a6e35;
+}
+
+.CProblema-input--incorrecta {
+    background: #fdecea;
+    border-color: #e8453c;
+    box-shadow: 0 4px 18px rgba(232, 69, 60, 0.3);
+    color: #8b1a17;
+}
+
+.CProblema-btn {
+    padding: 1.2rem 2rem;
+    border-radius: 1.2rem;
+    border: none;
+    background: #3ec0fa;
+    color: white;
+    font-family: var(--fuente);
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 14px rgba(62, 192, 250, 0.45);
+}
+
+.CProblema-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(62, 192, 250, 0.6);
+}
+
+.CProblema-btn:active:not(:disabled) {
+    transform: scale(0.96);
+}
+
+.CProblema-btn:disabled:not(.CProblema-btn--correcta):not(.CProblema-btn--incorrecta) {
+    background: #cdd9e5;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.CProblema-btn--correcta {
+    background: #34c467;
+    box-shadow: 0 4px 14px rgba(52, 196, 103, 0.4);
+    cursor: default;
+}
+
+.CProblema-btn--incorrecta {
+    background: #e8453c;
+    box-shadow: 0 4px 14px rgba(232, 69, 60, 0.35);
+    cursor: default;
+}
+
+@media (max-width: 1024px) {
+    .CProblema-enunciado { width: 100%; padding: 1.5rem 2rem; }
+    .CProblema-enunciado p { font-size: 1.2rem; }
+    .CProblema-input { font-size: 1.3rem; padding: 0.9rem 1.2rem; }
+    .CProblema-btn { font-size: 1rem; padding: 0.9rem 1.4rem; }
+}
+
+@media (max-width: 700px) {
+    .CProblema-enunciado p { font-size: 1rem; }
+    .CProblema-input { font-size: 1.1rem; padding: 0.7rem 1rem; }
+    .CProblema-btn { font-size: 0.9rem; padding: 0.7rem 1rem; }
+}

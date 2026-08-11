@@ -1,0 +1,157 @@
+.CPNLogros-contenedor {
+    padding: 0.5rem 0.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.CPNLogros-titulo {
+    font-family: var(--fuente);
+    font-size: 1.8rem;
+    color: #1A1A2E;
+    margin: 0;
+}
+
+.CPNLogros-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.CPNLogros-grupoTitulo {
+    font-family: var(--fuente);
+    font-size: 1.1rem;
+    color: #1A1A2E;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: solid 0.12rem #e8edf3;
+}
+
+.CPNLogros-tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.CPNLogros-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    border: solid 0.2rem var(--color_principal_Eduino);
+    border-radius: 1.2rem;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 4px 12px #3ebefa30;
+    transition: box-shadow 0.2s;
+}
+
+.CPNLogros-tarjeta--conseguido {
+    border-color: #f7c948;
+    box-shadow: 0 4px 12px rgba(247, 201, 72, 0.3);
+}
+
+.CPNLogros-tarjeta--reclamado {
+    border-color: #d0d7e3;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.CPNLogros-imagen {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: transparent;
+    filter: brightness(0);
+    transition: filter 0.3s ease;
+}
+
+.CPNLogros-tarjeta--conseguido .CPNLogros-imagen {
+    filter: none;
+}
+
+.CPNLogros-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+}
+
+.CPNLogros-nombre {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #1A1A2E;
+    margin: 0;
+}
+
+.CPNLogros-descripcion {
+    font-size: 0.8rem;
+    color: #6b7c93;
+    margin: 0;
+}
+
+.CPNLogros-barraFondo {
+    width: 100%;
+    height: 6px;
+    background: #e8edf3;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.CPNLogros-barraRelleno {
+    height: 100%;
+    background: var(--color_principal_Eduino);
+    border-radius: 99px;
+    transition: width 0.4s ease;
+}
+
+.CPNLogros-tarjeta--conseguido .CPNLogros-barraRelleno {
+    background: linear-gradient(90deg, #f7c948, #f77c4f);
+}
+
+.CPNLogros-progresoTexto {
+    font-size: 0.75rem;
+    color: #a0b4c8;
+    margin: 0;
+}
+
+.CPNLogros-pie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.CPNLogros-recompensa {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #f7a832;
+    white-space: nowrap;
+}
+
+.CPNLogros-botonReclamar {
+    background: linear-gradient(135deg, #f7c948, #f77c4f);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.35rem 0.8rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.CPNLogros-botonReclamar:hover {
+    opacity: 0.9;
+    transform: scale(1.04);
+}
+
+.CPNLogros-reclamado {
+    font-size: 0.78rem;
+    color: #a0b4c8;
+}

@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+body {
+  background: linear-gradient(160deg, #5bc8f5 0%, #1a8fbf 100%);
+  min-height: 100vh;
+
+  font-family: "Margarine", sans-serif;
+  
+}

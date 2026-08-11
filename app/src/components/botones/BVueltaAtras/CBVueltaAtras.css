@@ -1,0 +1,12 @@
+.CBVueltaAtras-botonImagen {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+
+    cursor: pointer;
+}
+
+.CBVueltaAtras-botonImagen:active {
+    transform: scale(0.9);
+}

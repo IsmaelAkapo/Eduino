@@ -1,0 +1,41 @@
+.CBSesion-contenedorBotones{
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.CBSesion-contenedorBotones p{
+    width: 20rem;
+    max-width: 100%;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.1rem;
+    border-radius: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+.CBSesion-contenedorBotones p:first-child{
+    background-color: var(--color_principal_Eduino);
+    color: white;
+    border: none;
+}
+
+.CBSesion-contenedorBotones p:last-child{
+    background-color: transparent;
+    color: var(--color_principal_Eduino);
+    border: 2px solid var(--color_principal_Eduino);
+}
+
+.CBSesion-contenedorBotones p:hover{
+    opacity: 0.85;
+    transform: scale(1.03);
+}
+
+.CBSesion-contenedorBotones p:active{
+    transform: scale(0.97);
+}

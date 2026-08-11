@@ -1,0 +1,167 @@
+.CPPerfil-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.5rem 0.5rem 2rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.CPPerfil-cargando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-family: var(--fuente);
+    font-size: 1.2rem;
+    color: #a0b4c8;
+}
+
+
+.CPPerfil-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: white;
+    border: solid 0.2rem var(--color_principal_Eduino);
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px #3ebefa76;
+}
+
+.CPPerfil-avatar img,
+.CPPerfil-avatarVacio {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: solid 0.2rem var(--color_principal_Eduino);
+    object-fit: cover;
+}
+
+.CPPerfil-avatarVacio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente);
+    font-size: 2rem;
+    color: #a0b4c8;
+    background: #f5f7fb;
+}
+
+.CPPerfil-cabeceraInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.CPPerfil-apodo {
+    font-family: var(--fuente);
+    font-size: 1.8rem;
+    color: #1A1A2E;
+    margin: 0;
+}
+
+.CPPerfil-nombre {
+    font-size: 0.95rem;
+    color: #6b7c93;
+    margin: 0;
+}
+
+.CPPerfil-nivel {
+    font-family: var(--fuente);
+    font-size: 0.85rem;
+    background: var(--color_principal_Eduino);
+    color: white;
+    padding: 0.2rem 0.9rem;
+    border-radius: 4rem;
+    width: fit-content;
+}
+
+.CPPerfil-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.CPPerfil-statCard {
+    background: white;
+    border: solid 0.2rem var(--color_principal_Eduino);
+    border-radius: 1.5rem;
+    padding: 1.2rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px #3ebefa76;
+}
+
+.CPPerfil-statCard img {
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: contain;
+}
+
+.CPPerfil-statValor {
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    color: #1A1A2E;
+    margin: 0;
+}
+
+.CPPerfil-statLabel {
+    font-size: 0.8rem;
+    color: #6b7c93;
+    margin: 0;
+}
+
+
+.CPPerfil-seccion {
+    background: white;
+    border: solid 0.2rem var(--color_principal_Eduino);
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px #3ebefa76;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.CPPerfil-seccionTitulo {
+    font-family: var(--fuente);
+    font-size: 1.2rem;
+    color: #1A1A2E;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 0.12rem #e8edf3;
+}
+
+.CPPerfil-filas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.CPPerfil-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #4a5568;
+    padding: 0.4rem 0;
+    border-bottom: solid 0.08rem #f0f4f8;
+}
+
+.CPPerfil-fila--total {
+    border-bottom: none;
+    border-top: solid 0.12rem #e8edf3;
+    margin-top: 0.3rem;
+    padding-top: 0.7rem;
+    font-weight: 600;
+}
+
+.CPPerfil-filaValor {
+    font-family: var(--fuente);
+    font-size: 1rem;
+    color: #1A1A2E;
+}
+
