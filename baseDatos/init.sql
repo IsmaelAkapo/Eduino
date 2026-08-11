@@ -216,7 +216,10 @@ VALUES (
         'Admin',
         '600000000',
         'admin@eduino.com',
-        '$2y$10$zaLzGz44Gza5XPn5q6Os0u9QsCNj3H2ietUhppIICQYcwKLn6FlqG'
+        -- Contraseña de demostración pública: demo1234
+        -- Sirve para el tutor (admin@eduino.com) y para el nene (apodo "nene"),
+        -- porque loginNene() valida contra el hash del tutor mediante el LEFT JOIN.
+        '$2y$10$MVXeGMaFkeJ5r4odDE.ATeKDDn/PxPqZLjScPtNEZBH4o9G80b.6S'
     );
 
 INSERT INTO
